@@ -2,7 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import ArenaWithBull from './components/ArenaWithBull'
-import { TestMatador } from './components/TestMatador'
+import TestMatador from './components/TestMatador'
 
 function App() {
   const [count, setCount] = useState(0)

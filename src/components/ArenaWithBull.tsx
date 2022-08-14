@@ -9,27 +9,25 @@ const ArenaWithBull = ({ matador }: ArenaWithBullProps) => {
     const [screemJoy, setScreamJoy] = useState(0);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setApplause(Math.random())
-        }, 1000)
-        return () => {
-            clearInterval(interval);
-        }
-    }, []);
+        // ignore props until 3
+        const applauseInterval = setInterval(() => {
+            setApplause(Math.floor(Math.random() * 4))
+        }, 1000);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
+         // purpose Parent rerender
+        const screamInterval = setInterval(() => {
             setScreamJoy(Math.random())
-        }, 800)
+        }, 800);
+
         return () => {
-            clearInterval(interval);
+            clearInterval(screamInterval);
+            clearInterval(applauseInterval);
         }
     }, []);
-
     return <div>
         <div>
-            <div>Bull </div>
-            <div>{React.cloneElement(matador, { screemJoy })}</div>
+            <div>Bull  {applause}</div>
+            <div>{React.cloneElement(matador, { applause })}</div>
         </div>
     </div>
 }
