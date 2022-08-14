@@ -9,7 +9,10 @@ function App() {
 
   return (
     <div className="App">
-      <ArenaWithBull matador={<TestMatador />} />
+
+      <ArenaWithBull
+        //@ts-ignore
+        matador={<TestMatador />} />
     </div>
   )
 }
