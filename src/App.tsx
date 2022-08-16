@@ -2,7 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import ArenaWithBull from './components/ArenaWithBull'
-import TestMatador from './components/TestMatador'
+import FunctionalMatador from './components/FunctionalMatador'
+import ClassMatador from './components/ClassMatador'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,7 +13,7 @@ function App() {
 
       <ArenaWithBull
         //@ts-ignore
-        matador={<TestMatador />} />
+        matador={<ClassMatador />} />
     </div>
   )
 }
