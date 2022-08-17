@@ -16,9 +16,11 @@ class ClassMatador extends React.Component<TestMatadorProps, { test: number }> {
         document.addEventListener('bullRun', this.log)
     }
 
-    // componentDidUpdate() {
-
-    // }
+    componentDidUpdate(prevProps: TestMatadorProps) {
+        if (prevProps.applause === this.props.applause) {
+            console.log('oh oh oh lucky');
+        }
+    }
 
     shouldComponentUpdate(nextProps: TestMatadorProps) {
         if (this.props.applause === nextProps.applause && nextProps.applause !== 3) return false;

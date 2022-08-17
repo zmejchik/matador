@@ -6,14 +6,10 @@ import FunctionalMatador from './components/FunctionalMatador'
 import ClassMatador from './components/ClassMatador'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-
       <ArenaWithBull
-        //@ts-ignore
-        matador={<ClassMatador />} />
+        matador={<FunctionalMatador />} />
     </div>
   )
 }

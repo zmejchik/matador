@@ -15,20 +15,21 @@ const ArenaWithBull = ({ matador }: ArenaWithBullProps) => {
             setApplause(Math.floor(Math.random() * 4))
         }, 1000);
 
-        // purpose Parent rerender
+        // purpose Parent rerender 
         const screamInterval = setInterval(() => {
             setScreamJoy(Math.random())
         }, 800);
-
+        // respond to custom Events
         const dispatchRunInterval = setInterval(() => {
             const BullRun = new CustomEvent('bullRun')
             document.dispatchEvent(BullRun);
         }, 3000);
+        // remove event listener on unmount
         const visibilityInterval = setInterval(() => {
             setIsVisible((oldIsVisible) => !oldIsVisible);
             const BullRun = new CustomEvent('bullRun')
             document.dispatchEvent(BullRun);
-        }, 5000);
+        }, 10000);
 
         return () => {
             clearInterval(screamInterval);
