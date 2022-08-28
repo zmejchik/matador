@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import Bull from "./Bull";
 
 interface ArenaWithBullProps {
     matador: React.ReactElement;
@@ -40,8 +41,9 @@ const ArenaWithBull = ({ matador }: ArenaWithBullProps) => {
         }
     }, []);
     return <div>
+            <h1>Bullfighing Arena</h1>
         <div>
-            <div>Bull  {applause}</div>
+            <div><Bull /></div>
             <div>{isVisible ? React.cloneElement(matador, { applause }) : null}</div>
         </div>
     </div>

@@ -1,10 +1,18 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  
+  height: 100%;
   padding: 0;
   width: 100%;
   text-align: center;
+}
+
+.App {
+  height: 100%;
+}
+
+h1 {
+  margin: 10px;
 }
 
 .logo {
