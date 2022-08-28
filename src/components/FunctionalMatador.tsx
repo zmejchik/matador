@@ -33,6 +33,4 @@ const areEqual = (prevProps: TestMatadorProps, nextProps: TestMatadorProps): boo
     return nextProps.applause !== 3;
 }
 
-TestMatador.whyDidYouRender = true;
-
 export default memo(TestMatador, areEqual)

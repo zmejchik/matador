@@ -27,6 +27,7 @@ const ArenaWithBull = ({ matador }: ArenaWithBullProps) => {
         // remove event listener on unmount
         const visibilityInterval = setInterval(() => {
             setIsVisible((oldIsVisible) => !oldIsVisible);
+            /// ??? where is error
             const BullRun = new CustomEvent('bullRun')
             document.dispatchEvent(BullRun);
         }, 10000);
@@ -47,3 +48,6 @@ const ArenaWithBull = ({ matador }: ArenaWithBullProps) => {
 }
 
 export default ArenaWithBull;
+
+
+//  бык бежал, матарод уворачивался 

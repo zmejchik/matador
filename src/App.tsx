@@ -4,12 +4,14 @@ import './App.css'
 import ArenaWithBull from './components/ArenaWithBull'
 import FunctionalMatador from './components/FunctionalMatador'
 import ClassMatador from './components/ClassMatador'
+import { Bull } from './components/Bull'
 
 function App() {
   return (
     <div className="App">
-      <ArenaWithBull
-        matador={<FunctionalMatador />} />
+      {/* <ArenaWithBull
+        matador={<FunctionalMatador />} /> */}
+        <Bull />
     </div>
   )
 }
