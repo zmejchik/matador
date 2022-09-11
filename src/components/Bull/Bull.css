@@ -11,42 +11,42 @@
     position: relative;
     margin: auto;
     display: block;
-    margin-top: 10vmin;
-    margin-bottom: 10vmin;
-    width: 100vmin;
-    height:80vmin;
-    transform: scale(0.2);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 500px;
+    height:400px;
+    /* transform: scale(0.2); */
   }
   
   .tail {
-    width: 5vmin;
-    height: 25vmin;
+    width: 25px;
+    height: 125px;
     position: absolute;
-    right: 7vmin;
-    box-shadow: 2vmin -2vmin 0 white;
+    right: 35px;
+    box-shadow: 10px -10px 0 white;
     border-radius: 50%;
     transform: rotate(-20deg);
-    top: 40vmin;
+    top: 200px;
   }
   
   .tail::before {
     content: '';
     position: absolute;
     background: white;
-    width: 5vmin;
-    height: 5vmin;
+    width: 25px;
+    height: 25px;
     border-radius: 51% 49% 40% 60% / 91% 92% 8% 9%;
     bottom: 0;
-    left: 3vmin;
+    left: 15px;
   }
   
   .body {
-    width: 70vmin;
-    height: 35vmin;
+    width: 350px;
+    height: 175px;
     background: white;
-    right: 10vmin;
+    right: 50px;
     position: absolute;
-    top: 25vmin;
+    top: 125px;
     border-radius: 20% 50% 0% 0%;
     overflow: hidden;
   }
@@ -57,36 +57,36 @@
   }
   
   .patch:nth-child(1) {
-    width: 30vmin;
-    height: 15vmin;
-    bottom: -2vmin;
-    left: 10vmin;
+    width: 150px;
+    height: 75px;
+    bottom: -10px;
+    left: 50px;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; 
     transform: rotate(20deg);
   }
   
   .patch:nth-child(2) {
-    width: 20vmin;
-    height: 10vmin;
-    left: 20vmin;
-    top: -2vmin;
+    width: 100px;
+    height: 50px;
+    left: 100px;
+    top: -10px;
     border-radius: 86% 14% 37% 63% / 30% 76% 24% 70%;
   }
   
   .patch:nth-child(3) {
-    height: 20vmin;
-    width: 20vmin;
-    right: 10vmin;
-    top: 10vmin;
+    height: 100px;
+    width: 100px;
+    right: 50px;
+    top: 50px;
     border-radius: 25% 75% 40% 60% / 54% 58% 42% 46%;
   }
   
   .legs {
     position: absolute;
-    width: 70vmin;
+    width: 350px;
     bottom: 0;
-    height: 20vmin;
-    right: 10vmin;
+    height: 100px;
+    right: 50px;
   }
 
   @keyframes front-left-leg-move {
@@ -98,7 +98,7 @@
      
     } */
     50% {
-        height: 30vmin;
+        height: 150px;
         transform: rotate(60deg) translate(-16vmin);
     }
 
@@ -112,8 +112,8 @@
     }
 
     50% {
-        left: 0.5vmin;
-        height: 30vmin;
+        left: 0.25px;
+        height: 150px;
         transform: rotate(60deg) translate(-16vmin);
     }
 
@@ -125,24 +125,24 @@
   
   .leg {
     position: absolute;
-    height: 22vmin;
-    width: 8vmin;
+    height: 110px;
+    width: 40px;
     background: white;
     border-radius: 0 0 20% 20%;
   }
 
   .leg.front-left {
     animation: front-left-leg-move-1 2s infinite 2s;
-    top: -2vmin; 
+    top: -10px; 
   }
   
   .leg.front-right {
     animation: front-left-leg-move 2s infinite;
     position: absolute;
-    height: 20vmin;
-    top: -2vmin;
-    left: 8vmin;
-    width: 8vmin;
+    height: 100px;
+    top: -10px;
+    left: 40px;
+    width: 40px;
     background: #EFEDED;
     border-radius: 0 0 20% 20%;
   }
@@ -156,7 +156,7 @@
      
     } */
     50% {
-      /* left: 0.5vmin; */
+      /* left: 0.25px; */
       height: 27vmin;
       transform: rotate(60deg) translate(-16vmin);
     }
@@ -175,8 +175,8 @@
      
     } */
     50% {
-      /* left: 0.5vmin; */
-      height: 30vmin;
+      /* left: 0.25px; */
+      height: 150px;
       transform: rotate(60deg) translate(-16vmin);
     }
 
@@ -193,32 +193,32 @@
   .leg.back-right {
     animation: back-right-leg-move 2s infinite;
     position: absolute;
-    height: 18vmin;
-    right: 8vmin;
-    width: 8vmin;
+    height: 140px;
+    right: 40px;
+    width: 40px;
     background: #EFEDED;
     border-radius: 0 0 20% 20%;
   }
   
   .horns {
     position: absolute;
-    left: 11vmin;
-    top: -8vmin;
-    width: 35vmin;
-    height: 20vmin;
+    left: 55px;
+    top: -40px;
+    width: 175px;
+    height: 100px;
     transform: rotate(10deg);
     border-radius: 50%;
-    box-shadow: 5vmin 5vmin 0 var(--pink), -5vmin 5vmin 0 var(--pink);
+    box-shadow: 25px 25px 0 var(--pink), -25px 25px 0 var(--pink);
   }
   
   
   
   .head {
     position: absolute;
-    left: 10vmin;
-    top: 5vmin;
-    width: 30vmin;
-    height: 35vmin;
+    left: 50px;
+    top: 25px;
+    width: 150px;
+    height: 175px;
     background: white;
     border-radius: 50% 50% 45% 45%;
     overflow: hidden;
@@ -230,7 +230,7 @@
     content: '';
     position: absolute;
     width: 16vmin;
-    height: 20vmin;
+    height: 100px;
     background: var(--black);
     border-radius: 40% 40% 40% 30%;
     transform: rotate(10deg);
@@ -241,7 +241,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 25vmin;
-    height: 15vmin;
+    height: 75px;
     background: var(--pink);
     border-radius: 50%;
     bottom: 0;
@@ -249,22 +249,22 @@
   
   .snout::before {
     content: '';
-    left: 8vmin;
-    top: 5vmin;
+    left: 40px;
+    top: 25px;
     position: absolute;
-    width: 2vmin;
-    height: 2vmin;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: var(--black);
   }
   
   .snout::after {
     content: '';
-    right: 8vmin;
-    top: 5vmin;
+    right: 40px;
+    top: 25px;
     position: absolute;
-    width: 2vmin;
-    height: 2vmin;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background: var(--black);
   }
@@ -274,25 +274,25 @@
     bottom: 4vmin;
     left: 50%;
     transform: translateX(-50%);
-    width: 15vmin;
-    height: 5vmin;
+    width: 75px;
+    height: 25px;
     border-radius: 50%;
     box-shadow: 0 0.75vmin 0 var(--black);
   }
   
   .eye {
-    width: 5vmin;
-    height: 5vmin;
+    width: 25px;
+    height: 25px;
     position: absolute;
     border: 2px solid var(--black);
     border-radius: 50%;
-    top: 10vmin;
+    top: 50px;
     background: white;
   }
   
   .eye::before {
-    width: 2vmin;
-    height: 2vmin;
+    width: 10px;
+    height: 10px;
     content: '';
     position: absolute;
     background: var(--black);
@@ -303,9 +303,9 @@
   }
   
   .eye.left {
-    left: 5vmin;
+    left: 25px;
   }
   
   .eye.right {
-    right: 5vmin;
+    right: 25px;
   }

@@ -4,7 +4,6 @@
   height: 100%;
   padding: 0;
   width: 100%;
-  text-align: center;
 }
 
 .App {
@@ -13,6 +12,7 @@
 
 h1 {
   margin: 10px;
+  text-align: center;
 }
 
 .logo {
@@ -48,4 +48,16 @@ h1 {
 
 .read-the-docs {
   color: #888;
+}
+
+.duel {
+  display: flex;
+  flex-direction: row;
+}
+
+.duel .matador {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

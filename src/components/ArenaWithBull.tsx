@@ -41,10 +41,10 @@ const ArenaWithBull = ({ matador }: ArenaWithBullProps) => {
         }
     }, []);
     return <div>
-            <h1>Bullfighing Arena</h1>
-        <div>
-            <div><Bull /></div>
-            <div>{isVisible ? React.cloneElement(matador, { applause }) : null}</div>
+        <h1>Bullfighing Arena</h1>
+        <div className={'duel'}>
+            <div className='matador'>{isVisible ? React.cloneElement(matador, { applause }) : null}</div>
+            <Bull />
         </div>
     </div>
 }
