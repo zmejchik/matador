@@ -40,11 +40,21 @@ const ArenaWithBull = ({ matador }: ArenaWithBullProps) => {
             clearInterval(visibilityInterval);
         }
     }, []);
-    return <div>
+    return <div className='duelWrapper'>
         <h1>Bullfighing Arena</h1>
-        <div className={'duel'}>
-            <div className='matador'>{isVisible ? React.cloneElement(matador, { applause }) : null}</div>
-            <Bull />
+        <div className='arena'>
+            <div className={'duel'}>
+                <div className="cell"></div>
+                <div className="cell"></div>
+                <div className="cell"></div>
+                <div className="cell"></div>
+                <div className="cell"></div>
+                <div className="cell">
+                <Bull />
+                </div>
+                {/* <div className='matador'>{isVisible ? React.cloneElement(matador, { applause }) : null}</div> */}
+          
+            </div>
         </div>
     </div>
 }

@@ -8,9 +8,8 @@ import Bull from './components/Bull'
 function App() {
   return (
     <div className="App">
-      {/* <ArenaWithBull
-        matador={<TerrifiedMatador />} /> */}
-        <Bull />
+      <ArenaWithBull
+        matador={<TerrifiedMatador />} />
     </div>
   )
 }
