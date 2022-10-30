@@ -1,12 +1,3 @@
-:root {
-  --black: #141416;
-  --pink: #E9BAA7;
-}
-
-body{
-  background: #05935F;
-}
-
 .box-canvas{
   position: relative;
   margin: auto;

@@ -2,30 +2,38 @@ import { memo, useEffect, useState } from "react";
 
 export interface TestMatadorProps {
     applause?: number;
+    setMatarodPosition?: (position: number) => void; 
+    matadorPosition?: number;
 }
 
-const TestMatador = ({ applause }: TestMatadorProps) => {
-    const [test, setTest] = useState(0);
+const TestMatador = ({ applause, matadorPosition, setMatarodPosition }: TestMatadorProps) => {
+    const [repeat, setRepeat] = useState(0);
 
     useEffect(() => {
         if (applause) {
-            setTest(applause);
-            if (applause === test) {
+            setRepeat(applause);
+            if (applause === repeat) {
                 console.log('oh oh oh lucky');
             }
         }
     }, [applause]);
 
     useEffect(() => {
-        const log = () => {
-            console.log('run');
+        const handleBullRun = (e: any) => {
+            if (e.detail.position === matadorPosition) {
+                let newPosition = Math.floor(Math.random() * 8);
+                if (newPosition === matadorPosition) {
+                    newPosition = ++newPosition;
+                }
+                setMatarodPosition?.(newPosition)
+            }
         }
-        document.addEventListener('bullRun', log)
+        document.addEventListener('bullRun', handleBullRun)
         return () => {
-            document.removeEventListener('bullRun', log)
+            document.removeEventListener('bullRun', handleBullRun)
         }
     }, [])
-    return <div> TEST matador {test}</div>
+    return <div> TEST matador {repeat}</div>
 };
 
 const areEqual = (prevProps: TestMatadorProps, nextProps: TestMatadorProps): boolean => {

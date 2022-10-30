@@ -2,10 +2,10 @@ import React from "react";
 import { TestMatadorProps } from "./FunctionalMatador";
 
 
-class ClassMatador extends React.Component<TestMatadorProps, { test: number }> {
+class ClassMatador extends React.Component<TestMatadorProps, { repeat: number }> {
     constructor(props: TestMatadorProps) {
         super(props);
-        this.state = { test: 0 };
+        this.state = { repeat: 0 };
     }
 
     log = () => {
@@ -25,7 +25,7 @@ class ClassMatador extends React.Component<TestMatadorProps, { test: number }> {
         document.removeEventListener('bullRun', this.log);
     }
     render() {
-        return <div> TEST matador {this.state.test}</div>;
+        return <div> TEST matador {this.state.repeat}</div>;
     }
 }
 
