@@ -1,311 +1,309 @@
 :root {
-    --black: #141416;
-    --pink: #E9BAA7;
-  }
-  
-  body{
-    background: #05935F;
-  }
-  
-  .box-canvas{
-    position: relative;
-    margin: auto;
-    display: block;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 500px;
-    height:400px;
-    /* transform: scale(0.2); */
-  }
-  
-  .tail {
-    width: 25px;
-    height: 125px;
-    position: absolute;
-    right: 35px;
-    box-shadow: 10px -10px 0 white;
-    border-radius: 50%;
-    transform: rotate(-20deg);
-    top: 200px;
-  }
-  
-  .tail::before {
-    content: '';
-    position: absolute;
-    background: white;
-    width: 25px;
-    height: 25px;
-    border-radius: 51% 49% 40% 60% / 91% 92% 8% 9%;
-    bottom: 0;
-    left: 15px;
-  }
-  
-  .body {
-    width: 350px;
-    height: 175px;
-    background: white;
-    right: 50px;
-    position: absolute;
-    top: 125px;
-    border-radius: 20% 50% 0% 0%;
-    overflow: hidden;
-  }
-  
-  .patch {
-    position: absolute;
-    background: var(--black);
-  }
-  
-  .patch:nth-child(1) {
-    width: 150px;
-    height: 75px;
-    bottom: -10px;
-    left: 50px;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; 
-    transform: rotate(20deg);
-  }
-  
-  .patch:nth-child(2) {
-    width: 100px;
-    height: 50px;
-    left: 100px;
-    top: -10px;
-    border-radius: 86% 14% 37% 63% / 30% 76% 24% 70%;
-  }
-  
-  .patch:nth-child(3) {
-    height: 100px;
-    width: 100px;
-    right: 50px;
-    top: 50px;
-    border-radius: 25% 75% 40% 60% / 54% 58% 42% 46%;
-  }
-  
-  .legs {
-    position: absolute;
-    width: 350px;
-    bottom: 0;
-    height: 100px;
-    right: 50px;
+  --black: #141416;
+  --pink: #E9BAA7;
+}
+
+body{
+  background: #05935F;
+}
+
+.box-canvas{
+  position: relative;
+  margin: auto;
+  display: block;
+  /* margin-top: 100px; */
+  /* margin-bottom: 100px; */
+  width: calc(500px / 2);
+  height: calc(400px / 2);
+}
+
+.tail {
+  width: calc(25px / 2);
+  height: calc(125px / 2);
+  position: absolute;
+  right: calc(35px / 2);
+  box-shadow: calc(10px / 2) calc(-10px / 2) 0 white;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+  top: calc(200px / 2);
+}
+
+.tail::before {
+  content: '';
+  position: absolute;
+  background: white;
+  width: calc(25px / 2);
+  height: calc(25px / 2);
+  border-radius: 51% 49% 40% 60% / 91% 92% 8% 9%;
+  bottom: 0;
+  left: calc(15px / 2);
+}
+
+.body {
+  width: calc(350px / 2);
+  height: calc(175px / 2);
+  background: white;
+  right: calc(50px / 2);
+  position: absolute;
+  top: calc(125px / 2);
+  border-radius: 20% 50% 0% 0%;
+  overflow: hidden;
+}
+
+.patch {
+  position: absolute;
+  background: var(--black);
+}
+
+.patch:nth-child(1) {
+  width: calc(150px / 2);
+  height: calc(75px / 2);
+  bottom: calc(-10px / 2);
+  left: calc(50px / 2);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; 
+  transform: rotate(20deg);
+}
+
+.patch:nth-child(2) {
+  width: calc(100px / 2);
+  height: calc(50px / 2);
+  left: calc(100px / 2);
+  top: calc(-10px / 2);
+  border-radius: 86% 14% 37% 63% / 30% 76% 24% 70%;
+}
+
+.patch:nth-child(3) {
+  height: calc(100px / 2);
+  width: calc(100px / 2);
+  right: calc(50px / 2);
+  top: calc(50px / 2);
+  border-radius: 25% 75% 40% 60% / 54% 58% 42% 46%;
+}
+
+.legs {
+  position: absolute;
+  width: calc(350px / 2);
+  bottom: 0;
+  height: calc(100px / 2);
+  right: calc(50px / 2);
+}
+
+@keyframes front-left-leg-move {
+  0% {
+      transform: rotate(0); 
   }
 
-  @keyframes front-left-leg-move {
-    0% {
-        transform: rotate(0); 
-    }
-
-    /* 25% {
-     
-    } */
-    50% {
-        height: 150px;
-        transform: rotate(60deg) translate(-16vmin);
-    }
-
-    100% {
-        transform: rotate(0);
-    }
-  }
-  @keyframes front-left-leg-move-1 {
-    0% {
-        transform: rotate(0); 
-    }
-
-    50% {
-        left: 0.25px;
-        height: 150px;
-        transform: rotate(60deg) translate(-16vmin);
-    }
-
-    100% {
-        transform: rotate(0);
-    }
+  /* 25% {
+   
+  } */
+  50% {
+      height: calc(130px / 2);
+      transform: rotate(30deg) translate(-3vmin);
   }
 
-  
-  .leg {
-    position: absolute;
-    height: 110px;
-    width: 40px;
-    background: white;
-    border-radius: 0 0 20% 20%;
+  100% {
+      transform: rotate(0);
+  }
+}
+@keyframes front-left-leg-move-1 {
+  0% {
+      transform: rotate(0); 
   }
 
-  .leg.front-left {
-    animation: front-left-leg-move-1 2s infinite 2s;
-    top: -10px; 
-  }
-  
-  .leg.front-right {
-    animation: front-left-leg-move 2s infinite;
-    position: absolute;
-    height: 100px;
-    top: -10px;
-    left: 40px;
-    width: 40px;
-    background: #EFEDED;
-    border-radius: 0 0 20% 20%;
+  50% {
+      /*left: calc(0.25px / 2);*/
+      height: calc(130px / 2);
+      transform: rotate(30deg) translate(-2vmin);
   }
 
-  @keyframes back-left-leg-move {
-    0% {
-        transform: rotate(0); 
-    }
-
-    /* 25% {
-     
-    } */
-    50% {
-      /* left: 0.25px; */
-      height: 27vmin;
-      transform: rotate(60deg) translate(-16vmin);
-    }
-
-    100% {
-        transform: rotate(0);
-    }
+  100% {
+      transform: rotate(0);
   }
+}
 
-  @keyframes back-right-leg-move {
-    0% {
-        transform: rotate(0); 
-    }
 
-    /* 25% {
-     
-    } */
-    50% {
-      /* left: 0.25px; */
-      height: 150px;
-      transform: rotate(60deg) translate(-16vmin);
-    }
+.leg {
+  position: absolute;
+  height: calc(110px / 2);
+  width: calc(40px / 2);
+  background: white;
+  border-radius: 0 0 20% 20%;
+}
 
-    100% {
-        transform: rotate(0);
-    }
+.leg.front-left {
+  animation: front-left-leg-move-1 2s infinite 2s;
+  top: calc(-10px / 2); 
+}
+
+.leg.front-right {
+  animation: front-left-leg-move 2s infinite;
+  position: absolute;
+  height: calc(100px / 2);
+  top: calc(-10px / 2);
+  left: calc(40px / 2);
+  width: calc(40px / 2);
+  background: #EFEDED;
+  border-radius: 0 0 20% 20%;
+}
+
+@keyframes back-left-leg-move {
+  0% {
+      transform: rotate(0); 
   }
 
-  .leg.back-left {
-    right: 0;
-    animation: back-left-leg-move  2s infinite;
+  /* 25% {
+   
+  } */
+  50% {
+    /* left: 0.25px; */
+    height: calc(130px / 2);
+    transform: rotate(30deg) translate(-3vmin);
   }
-  
-  .leg.back-right {
-    animation: back-right-leg-move 2s infinite;
-    position: absolute;
-    height: 140px;
-    right: 40px;
-    width: 40px;
-    background: #EFEDED;
-    border-radius: 0 0 20% 20%;
+
+  100% {
+      transform: rotate(0);
   }
-  
-  .horns {
-    position: absolute;
-    left: 55px;
-    top: -40px;
-    width: 175px;
-    height: 100px;
-    transform: rotate(10deg);
-    border-radius: 50%;
-    box-shadow: 25px 25px 0 var(--pink), -25px 25px 0 var(--pink);
+}
+
+@keyframes back-right-leg-move {
+  0% {
+      transform: rotate(0); 
   }
-  
-  
-  
-  .head {
-    position: absolute;
-    left: 50px;
-    top: 25px;
-    width: 150px;
-    height: 175px;
-    background: white;
-    border-radius: 50% 50% 45% 45%;
-    overflow: hidden;
-    transform: rotate(10deg);
+
+  /* 25% {
+   
+  } */
+  50% {
+    /* left: 0.25px; */
+    height: calc(130px / 2);
+    transform: rotate(30deg) translate(-2vmin);
   }
-  
-  /* Patch */
-  .head::before {
-    content: '';
-    position: absolute;
-    width: 16vmin;
-    height: 100px;
-    background: var(--black);
-    border-radius: 40% 40% 40% 30%;
-    transform: rotate(10deg);
+
+  100% {
+      transform: rotate(0);
   }
-  
-  .snout {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 25vmin;
-    height: 75px;
-    background: var(--pink);
-    border-radius: 50%;
-    bottom: 0;
-  }
-  
-  .snout::before {
-    content: '';
-    left: 40px;
-    top: 25px;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--black);
-  }
-  
-  .snout::after {
-    content: '';
-    right: 40px;
-    top: 25px;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: var(--black);
-  }
-  
-  .mouth {
-    position: absolute;
-    bottom: 4vmin;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 75px;
-    height: 25px;
-    border-radius: 50%;
-    box-shadow: 0 0.75vmin 0 var(--black);
-  }
-  
-  .eye {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    border: 2px solid var(--black);
-    border-radius: 50%;
-    top: 50px;
-    background: white;
-  }
-  
-  .eye::before {
-    width: 10px;
-    height: 10px;
-    content: '';
-    position: absolute;
-    background: var(--black);
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-  }
-  
-  .eye.left {
-    left: 25px;
-  }
-  
-  .eye.right {
-    right: 25px;
-  }
+}
+
+.leg.back-left {
+  right: 0;
+  animation: back-left-leg-move  2s infinite;
+}
+
+.leg.back-right {
+  animation: back-right-leg-move 2s infinite;
+  position: absolute;
+  height: calc(100px / 2);
+  right: calc(40px / 2);
+  width: calc(40px / 2);
+  background: #EFEDED;
+  border-radius: 0 0 20% 20%;
+}
+
+.horns {
+  position: absolute;
+  left: calc(55px / 2);
+  top: calc(-40px / 2);
+  width: calc(175px / 2);
+  height: calc(100px / 2);
+  transform: rotate(10deg);
+  border-radius: 50%;
+  box-shadow: calc(25px / 2) calc(25px / 2) 0 var(--pink), calc(-25px / 2) calc(25px / 2) 0 var(--pink);
+}
+
+
+.head {
+  position: absolute;
+  left: calc(50px / 2);
+  top: calc(25px / 2);
+  width: calc(150px / 2);
+  height: calc(175px / 2);
+  background: white;
+  border-radius: 50% 50% 45% 45%;
+  overflow: hidden;
+  transform: rotate(10deg);
+}
+
+/* Patch */
+.head::before {
+  content: '';
+  position: absolute;
+  width: calc(16vmin / 2);
+  height: calc(100px / 2);
+  background: var(--black);
+  border-radius: 40% 40% 40% 30%;
+  transform: rotate(10deg);
+}
+
+.snout {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(25vmin / 2);
+  height: calc(75px / 2);
+  background: var(--pink);
+  border-radius: 50%;
+  bottom: 0;
+}
+
+.snout::before {
+  content: '';
+  left: calc(40px / 2);
+  top: calc(25px / 2);
+  position: absolute;
+  width: calc(10px / 2);
+  height: calc(10px / 2);
+  border-radius: 50%;
+  background: var(--black);
+}
+
+.snout::after {
+  content: '';
+  right: calc(40px / 2);
+  top: calc(25px / 2);
+  position: absolute;
+  width: calc(10px / 2);
+  height: calc(10px / 2);
+  border-radius: 50%;
+  background: var(--black);
+}
+
+.mouth {
+  position: absolute;
+  bottom: calc(4vmin / 2);
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(75px / 2);
+  height: calc(25px / 2);
+  border-radius: 50%;
+  box-shadow: 0 calc(0.75vmin / 2) 0 var(--black);
+}
+
+.eye {
+  width: calc(25px / 2);
+  height: calc(25px / 2);
+  position: absolute;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  top: calc(50px / 2);
+  background: white;
+}
+
+.eye::before {
+  width: calc(10px / 2);
+  height: calc(10px / 2);
+  content: '';
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background: var(--black);
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+}
+
+.eye.left {
+  left: calc(25px / 2);
+}
+
+.eye.right {
+  right: calc(25px / 2);
+}
