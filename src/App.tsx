@@ -1,14 +1,14 @@
-import './App.css'
-import ArenaWithBull from './components/ArenaWithBull'
-import { Matador } from './components/Matador'
+import "./App.css";
+import ArenaWithBull from "./components/ArenaWithBull";
+import Matador from "./components/Matador";
+import OldMatador from "./components/Oldmatador";
 
 function App() {
   return (
     <div className="App">
-      <ArenaWithBull
-        matador={<Matador />} />
+      <ArenaWithBull matador={<OldMatador />} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
